@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bai_Cao_Nguoi-May</string>
+    <string name="rut_3_la_ngau_nhien">Rút 3 lá ngẫu nhiên</string>
+    <string name="anh1">anh1</string>
+    <string name="imagecards2">imageCards2</string>
+    <string name="imagecards1">imagecards1</string>
+    <string name="imagecards3">imagecards3</string>
+    <string name="Ket_qua">Kết quả</string>
+</resources>
