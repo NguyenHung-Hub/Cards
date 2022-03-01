@@ -6,4 +6,6 @@
     <string name="imagecards1">imagecards1</string>
     <string name="imagecards3">imagecards3</string>
     <string name="Ket_qua">Kết quả</string>
+    <string name="nguoi_may">Người - Máy</string>
+    <string name="may_may">Máy - Máy</string>
 </resources>
