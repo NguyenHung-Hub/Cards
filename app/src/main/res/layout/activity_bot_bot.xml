@@ -4,6 +4,201 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BotBotActivity">
+    tools:context=".BotBotActivity"
+    android:background="@color/bg_color">
+
+    <!--Begin: Bot View-->
+
+    <LinearLayout
+        android:id="@+id/viewCardsBotA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/green_dracula"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv1_botBot"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/imagecards1"
+            app:srcCompat="@drawable/b1fv" />
+
+        <ImageView
+            android:id="@+id/iv2_botBot"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/imagecards2"
+            app:srcCompat="@drawable/b1fv" />
+
+        <ImageView
+            android:id="@+id/iv3_botBot"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/imagecards3"
+            app:srcCompat="@drawable/b1fv" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_subScoreBotA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_dracula"
+
+        android:gravity="center"
+
+        android:paddingBottom="10dp"
+        android:text="@string/Ket_qua"
+        android:textColor="@color/bg_color"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewCardsBotA" />
+
+
+    <!--End: Bot View-->
+
+    <!--Begin: Score View-->
+    <LinearLayout
+        android:id="@+id/viewScoreBotBot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:gravity="center"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_subScoreBotA">
+
+        <TextView
+            android:id="@+id/botA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bot A"
+            android:textColor="@color/green_dracula"
+            android:textSize="40sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/scoreBotBot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:text="0 - 0"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/botB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bot B"
+            android:textColor="@color/orange_dracula"
+            android:textSize="40sp"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+
+    <!--End: Score View-->
+
+
+    <!--Begin: People View-->
+    <LinearLayout
+        android:id="@+id/viewCardsPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/orange_dracula"
+        android:gravity="center"
+
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/viewScoreBotBot">
+
+        <ImageView
+            android:id="@+id/iv4_botBot"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/imagecards1"
+            app:srcCompat="@drawable/b1fv" />
+
+        <ImageView
+            android:id="@+id/iv5_botBot"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/imagecards2"
+            app:srcCompat="@drawable/b1fv" />
+
+        <ImageView
+            android:id="@+id/iv6_botBot"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/imagecards3"
+            app:srcCompat="@drawable/b1fv" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_subScoreBotB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_dracula"
+
+        android:gravity="center"
+
+        android:paddingBottom="10dp"
+        android:text="@string/Ket_qua"
+        android:textColor="@color/bg_color"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/viewCardsPeople" />
+    <!--End: People View-->
+
+    <TextView
+        android:id="@+id/tv_countdownTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-:-"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_subScoreBotB"
+        android:layout_marginTop="16dp"
+        />
+
+    <Button
+        android:id="@+id/btnStopStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="32dp"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="32dp"
+        android:backgroundTint="@color/cyan_dracula"
+
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+
+        android:text="Start"
+        android:textColor="@color/bg_color"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_countdownTimer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

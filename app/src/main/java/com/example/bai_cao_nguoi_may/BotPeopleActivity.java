@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class BotPeopleActivity extends AppCompatActivity {
 
-    int manghinhbai[] = {
+    private int manghinhbai[] = {
             R.drawable.c1, R.drawable.c2, R.drawable.c3, R.drawable.c4, R.drawable.c5,
             R.drawable.c6, R.drawable.c7, R.drawable.c8, R.drawable.c9, R.drawable.c10,
             R.drawable.cj, R.drawable.cq, R.drawable.ck,
@@ -119,10 +119,17 @@ public class BotPeopleActivity extends AppCompatActivity {
                 if (timesPlay == 0) {
                     btnGetCards.setEnabled(false);
 
+                    String endResult ="Bạn đã thắng";
+                    if (scoreBot>scorePeople){
+                        endResult ="Bạn đã thua";
+                    }else if (scoreBot==scorePeople){
+                        endResult ="Bạn hòa với máy";
+                    }
+
                     AlertDialog alertDialog = new AlertDialog.Builder(BotPeopleActivity.this)
-                            .setTitle("Ai thắng")
-                            .setMessage("Nhấn Ok để chơi lại.")
-                            .setPositiveButton("Exist", new DialogInterface.OnClickListener() {
+                            .setTitle(endResult)
+                            .setMessage("Bạn có muốn chơi lại không?")
+                            .setPositiveButton("Thoát", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     finish();
                                 }

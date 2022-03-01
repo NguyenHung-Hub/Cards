@@ -31,18 +31,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intentBotPeople, 100);
             }
         });
+
+        btnBotBot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentBotBot = new Intent(MainActivity.this, BotBotActivity.class);
+                startActivity(intentBotBot);
+            }
+        });
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 100 && resultCode == RESULT_OK){
-            String rs = data.getStringExtra("choilai");
-//            if (rs == "Chơi lại"){
-//                Intent intentBotPeople = new Intent(MainActivity.this, BotPeopleActivity.class);
-//                startActivityForResult(intentBotPeople, 100);
-//            }
-        }
     }
 }
